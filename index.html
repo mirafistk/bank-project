@@ -74,7 +74,7 @@
         const depositButton = document.getElementById('deposit-button');
         depositButton.addEventListener('click', function(){
             const depositArea = document.getElementById('deposit-area').value;
-            const depositAmount = parseFloat('deposit-area');
+            const depositAmount = parseFloat(depositArea);
 
             const curentDepositNum = document.getElementById('curentDeposit').innerText;
             const curentDepositNumber = parseFloat(curentDepositNum);
