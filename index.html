@@ -76,10 +76,10 @@
             const depositArea = document.getElementById('deposit-area').value;
             const depositAmount = parseFloat('deposit-area');
 
-            const curentDeposit = document.getElementById('curentDeposit').innerText;
-            const curentDepositNumber = parseFloat('curentDeposit');
+            const curentDepositNum = document.getElementById('curentDeposit').innerText;
+            const curentDepositNumber = parseFloat(curentDepositNum);
             const totalDeposit = depositAmount + curentDepositNumber;
-            console.log(totalDeposit);
+            
 
              document.getElementById('curentDeposit').innerText = totalDeposit;
 
