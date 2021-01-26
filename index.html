@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login-area" >
+        <h1 class="text-center">Welcome to my Bank Project</h1>
+        <div class="submit-area shadow-lg p-5 mb-5 g-white rounded">
+            <h4>Login Here</h4>
+            <br>
+            <input type="email" placeholder="Your Email Here" name="" id="" class="form-control">
+            <br>
+            <input type="password" placeholder="Your password Here" name="" id="" class="form-control">
+            <br>
+            <button id="login" class="btn btn-success">Enter</button>
+        </div>
+    </div>
+    <div id="transaction-area">
+      <div class="row mb-3">
+        <div class="col-md-4 mb-3">
+            <div class="deposit status">
+                <h5>Deposit</h5>
+                <h2>$ <span id="curentDeposit">00</span></h2>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="Withdraw status">
+                <h5>Withdraw</h5>
+                 <h2>$00</h2>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="blance status"> 
+                <h5>Balance</h5>
+                <h2>$1240</h2>
+            </div>
+        </div>
+      </div>
+      <div class="row  ">
+          <div class="col-md-6">
+              <div class="submit-area shadow-lg p-5 m-3 g-white rounded">
+                <h4>Deposit</h4>
+                <input id="deposit-area" type="text" placeholder="Please Deposit Now" class="form-control">
+                <br>
+                <button id="deposit-button" class="btn btn-success">Deposit</button>
+              </div>
+          </div>
+          <div class="col-md-6 ">
+              <div class="submit-area shadow-lg p-5 m-3 g-white rounded">
+                <h4>Withdraw</h4>
+                <input type="text" placeholder="Please Withdraw your Balance" class="form-control">
+                <br>
+                <button class="btn btn-success">Withdraw</button>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <script>
+        // login Button Event Handler 
+        const loginBtn = document.getElementById('login');
+        loginBtn.addEventListener('click',function(){
+               const loginArea = document.getElementById('login-area');
+               loginArea.style.display = 'none';
+               const Transaction = document.getElementById('transaction-area');
+               Transaction.style.display = 'block';
+        })
+        // Deposit Button Event Handler
+        const depositButton = document.getElementById('deposit-button');
+        depositButton.addEventListener('click', function(){
+            const depositArea = document.getElementById('deposit-area').value;
+            const depositAmount = parseFloat('deposit-area');
+
+            const curentDeposit = document.getElementById('curentDeposit').innerText;
+            const curentDepositNumber = parseFloat('curentDeposit');
+            const totalDeposit = depositAmount + curentDepositNumber;
+            console.log(totalDeposit);
+
+            // document.getElementById('curentDeposit').innerText = totalDeposit;
+
+        })
+    </script>   
+</body>
+</html>
